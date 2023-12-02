@@ -1,6 +1,6 @@
 import express from 'express'
 import env from 'dotenv'
-import Connect from './ConnectDB/connect'
+import Connect from './ConnectDB/connect.js'
 env.config()
 let app=express()
 app.use(express.json())
@@ -13,5 +13,4 @@ let start=async ()=>
         console.log("Connected to port 2000")
     })
 }
-
 start()
